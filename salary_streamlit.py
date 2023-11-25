@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import utils
-import plotly.express as px
 
 ##################################################################################################
 # Data Pull
@@ -90,18 +89,18 @@ if st.session_state.pull_data:
         y="Median_salary"
     )
 
-    kde = px.histogram(
-        data_frame=salary_df,
-        x="salary_50_percentile",
-        hover_data=salary_df.columns
-    )
-
-    kde.update_layout(
-        title="Salary Distribution",
-        xaxis_title="Median Salary",
-        yaxis_title="Count"
-    )
-
-    st.plotly_chart(
-        kde
-    )
+    # kde = px.histogram(
+    #     data_frame=salary_df,
+    #     x="salary_50_percentile",
+    #     hover_data=salary_df.columns
+    # )
+    #
+    # kde.update_layout(
+    #     title="Salary Distribution",
+    #     xaxis_title="Median Salary",
+    #     yaxis_title="Count"
+    # )
+    #
+    # st.plotly_chart(
+    #     kde
+    # )
